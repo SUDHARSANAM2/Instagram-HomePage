@@ -1,0 +1,81 @@
+.App {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.desktopView {
+  display: flex;
+}
+
+.mobileView {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.leftSide {
+  flex: 0.25;
+  height: 150vh;
+
+}
+
+.middleSide {
+  flex: 0.5;
+}
+
+.RightSide {
+  flex: 0.25;
+}
+
+@media (max-width: 768px) {
+  .mobileView{
+    visibility: visible;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    margin-left: 15px;
+    margin-top: 10px;
+
+  }
+  .instaLogo1 {
+    visibility: visible;
+    width: 50px;
+    text-align: center;
+
+  }
+  .desktopView{
+    display: flex;
+    flex-direction: column;
+  }
+  .leftSide {
+    width: 100%;
+    flex: 0.4;
+  }
+
+  .middleSide {
+    width: 100%;
+    flex: 0.6;
+  }
+
+  .RightSide {
+    visibility: hidden;
+    flex: 0;
+
+  }
+}
+@media (max-width: 600px){
+  .App{
+    display: flex;
+    flex-direction: column;
+  }
+  .mobileView{
+    visibility: visible;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    margin-left: 15px;
+    margin-top: 10px;
+     
+  }
+}
